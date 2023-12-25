@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Isa.Flow.Manager.props" />
+</Project>

@@ -1,0 +1,4 @@
+.hg/
+packages/
+.hgignore
+*.json

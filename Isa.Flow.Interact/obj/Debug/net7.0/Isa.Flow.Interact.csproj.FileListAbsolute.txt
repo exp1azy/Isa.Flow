@@ -1,0 +1,14 @@
+C:\Work\Projects\Isa.Flow\Isa.Flow.Interact\bin\Debug\net7.0\Isa.Flow.Interact.deps.json
+C:\Work\Projects\Isa.Flow\Isa.Flow.Interact\bin\Debug\net7.0\Isa.Flow.Interact.dll
+C:\Work\Projects\Isa.Flow\Isa.Flow.Interact\bin\Debug\net7.0\Isa.Flow.Interact.pdb
+C:\Work\Projects\Isa.Flow\Isa.Flow.Interact\obj\Debug\net7.0\Isa.Flow.Interact.csproj.AssemblyReference.cache
+C:\Work\Projects\Isa.Flow\Isa.Flow.Interact\obj\Debug\net7.0\Isa.Flow.Interact.Resources.Error.resources
+C:\Work\Projects\Isa.Flow\Isa.Flow.Interact\obj\Debug\net7.0\Isa.Flow.Interact.csproj.GenerateResource.cache
+C:\Work\Projects\Isa.Flow\Isa.Flow.Interact\obj\Debug\net7.0\Isa.Flow.Interact.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\Projects\Isa.Flow\Isa.Flow.Interact\obj\Debug\net7.0\Isa.Flow.Interact.AssemblyInfoInputs.cache
+C:\Work\Projects\Isa.Flow\Isa.Flow.Interact\obj\Debug\net7.0\Isa.Flow.Interact.AssemblyInfo.cs
+C:\Work\Projects\Isa.Flow\Isa.Flow.Interact\obj\Debug\net7.0\Isa.Flow.Interact.csproj.CoreCompileInputs.cache
+C:\Work\Projects\Isa.Flow\Isa.Flow.Interact\obj\Debug\net7.0\Isa.Flow.Interact.dll
+C:\Work\Projects\Isa.Flow\Isa.Flow.Interact\obj\Debug\net7.0\refint\Isa.Flow.Interact.dll
+C:\Work\Projects\Isa.Flow\Isa.Flow.Interact\obj\Debug\net7.0\Isa.Flow.Interact.pdb
+C:\Work\Projects\Isa.Flow\Isa.Flow.Interact\obj\Debug\net7.0\ref\Isa.Flow.Interact.dll

@@ -1,0 +1,21 @@
+﻿<div class="modal" tabindex="-1" id="declareNewQueueForm">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Очередь NewArticles</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="newQueueForm" action="/Home/QueueDeclare" method="post">
+                <div id="modalBody" class="modal-body">
+                    <label id="newLabel" for="limit">Введите лимит</label>
+                    <input name="Limit" id="limit" value="5000" />
+                    <input style="display: none" name="QueueName" id="queueName" value="NewArticles"/>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary" onclick="declareNewQueue()">Запустить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

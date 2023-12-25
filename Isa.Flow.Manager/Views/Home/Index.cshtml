@@ -1,0 +1,127 @@
+﻿@model StateViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<input type="hidden" id="timeoutValue" value="5000"/>
+
+@{
+    if (Model == null)
+    {
+        await Html.RenderPartialAsync("~/Views/Partials/AllActorsLoadingPartial.cshtml"); 
+    }
+    else
+    {
+        <div class="isa-main-queues">
+            <div id="newQueueBlock" class="isa-main-queue-block">
+                <span id="newUpdatedQueue" class="isa-queue">@(Model.NewAndUpdatedQueueName ?? "NewQueueName")<br /></span>
+                <span id="newQueueCount" class="isa-queue-count">@(Model.NewCount ?? 0)</span>
+                <button id="declareNewQueue" class="isa-add-queue" style=@(Model.NewCount != null ? "display: none" : "") data-toggle="modal" data-target="#declareNewQueueForm">Объявить очередь</button>
+            </div>
+            <div id="deletedQueueBlock" class="isa-main-queue-block">
+                <span id="deletedQueue" class="isa-queue">@(Model.DeletedQueueName ?? "DeletedQueueName")<br /></span>
+                <span id="deletedQueueCount" class="isa-queue-count">@(Model.DeletedCount ?? 0)</span>
+                <button id="declareDeletedQueue" class="isa-add-queue" style=@(Model.DeletedCount != null ? "display: none" : "") data-toggle="modal" data-target="#declareDeletedQueueForm">Объявить очередь</button>
+            </div>
+        </div>
+
+        <div class="isa-main-actors">
+        @{
+            if (Model.ExtractorStarted == null)
+            {
+                await Html.RenderPartialAsync("~/Views/Partials/ExtractorLoadingPartial.cshtml");
+            }
+            else 
+            {
+                <div id="extractorBlock" class="isa-main-extractor">
+                    <span class="isa-extractor-title">Экстрактор</span>
+                    <div class="isa-main-progress">
+                        <button disabled id="buttonNew" class=@(Model.ExtractorStarted.NewState ? "isa-main-progress-func-on" : "isa-main-progress-func-off") onclick="disableButton(this)">
+                            @(Model.ExtractorStarted.NewState ? "NEW Активно" : "NEW Не активно")
+                        </button>
+                        <button disabled id="buttonUpd" class=@(Model.ExtractorStarted.ModifiedState ? "isa-main-progress-func-on" : "isa-main-progress-func-off") onclick="disableButton(this)">
+                            @(Model.ExtractorStarted.ModifiedState ? "UPDATED Активно" : "UPDATED Не активно")
+                        </button>
+                        <button disabled id="buttonDel" class=@(Model.ExtractorStarted.DeletedState ? "isa-main-progress-func-on" : "isa-main-progress-func-off") onclick="disableButton(this)">
+                            @(Model.ExtractorStarted.DeletedState ? "DELETED Активно" : "DELETED Не активно")
+                        </button>
+                    </div>
+                    <span id="lastArticleIdState">LastArticleId: 0</span>
+                    <div class="isa-main-block">
+                        <button disabled id="openModal" class="isa-start-ex-download" data-toggle="modal" data-target="#lastArticleForm">Загрузка...</button>
+                    </div>
+                </div>
+            }
+
+            if (Model.IndexerStarted == null)
+            {
+                await Html.RenderPartialAsync("~/Views/Partials/IndexerLoadingPartial.cshtml");
+            }
+            else
+            {
+                <div id="indexerBlock" class="isa-main-indexer">
+                    <div class="isa-index-before">
+                        <span class="isa-indexer-title">Индексатор</span>
+                        <button disabled id="buttonIndex" class=@((bool)Model.IndexerStarted ? "isa-main-index-on" : "isa-main-index-off") onclick="disableButton(this)">
+                            @((bool)Model.IndexerStarted ? "Активно" : "Не активно")
+                        </button>
+                    </div>
+                    <button disabled id="indexSubmit" type="button" class=@((bool)Model.IndexerStarted ? "isa-index-stop" : "isa-index-start") onclick="startIndex()">
+                        @((bool)Model.IndexerStarted ? "Запущено" : "Запустить")
+                    </button>
+                </div>
+            }
+
+            if (Model.TgCollectorStarted == null)
+            {
+                await Html.RenderPartialAsync("~/Views/Partials/TgCollectorLoadingPartial.cshtml");
+            }
+            else
+            {
+                <div id="tgCollectorBlock" class="isa-main-tgcollector">
+                    <div class="isa-tgcollector-before">
+                        <span class="isa-tgcollector-title">Телеграм</span>
+                        <button disabled id="buttonTgCollector" class=@((bool)Model.TgCollectorStarted ? "isa-main-tgcollector-on" : "isa-main-tgcollector-off") onclick="disableButton(this)">
+                            @((bool)Model.TgCollectorStarted ? "Активно" : "Не активно")
+                        </button>
+                    </div>
+                    <button disabled id="tgCollectorSubmit" type="button" class=@((bool)Model.TgCollectorStarted ? "isa-tgcollector-stop" : "isa-tgcollector-start") onclick="startTgCollector()">
+                        @((bool)Model.TgCollectorStarted ? "Запущено" : "Запустить")
+                    </button>
+                </div>
+            }
+
+            if (Model.VkCollectorStarted == null)
+            {
+                await Html.RenderPartialAsync("~/Views/Partials/VkCollectorLoadingPartial.cshtml");
+            }
+            else
+            {
+                <div id="vkCollectorBlock" class="isa-main-vkcollector">
+                    <div class="isa-vkcollector-before">
+                        <span class="isa-vkcollector-title">Вконтакте</span>
+                        <button disabled id="buttonVkCollector" class=@((bool)Model.VkCollectorStarted ? "isa-main-vkcollector-on" : "isa-main-vkcollector-off") onclick="disableButton(this)">
+                            @((bool)Model.VkCollectorStarted ? "Активно" : "Не активно")
+                        </button>
+                    </div>
+                    <button disabled id="vkCollectorSubmit" type="button" class=@((bool)Model.VkCollectorStarted ? "isa-vkcollector-stop" : "isa-vkcollector-start") onclick="startVkCollector()">
+                        @((bool)Model.VkCollectorStarted ? "Запущено" : "Запустить")
+                    </button>
+                </div>
+            }
+        }
+        </div>
+    }
+}
+
+@{
+    await Html.RenderPartialAsync("~/Views/ModalPartials/StartExtractionModal.cshtml");
+}
+@{
+    await Html.RenderPartialAsync("~/Views/ModalPartials/DeclareNewQueueModal.cshtml");
+}
+@{
+    await Html.RenderPartialAsync("~/Views/ModalPartials/DeclareDeletedQueueModal.cshtml");
+}
+
+<script src="~/js/script.min.js"></script>

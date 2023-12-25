@@ -1,0 +1,65 @@
+﻿<div class="isa-main-queues">
+    <div id="newQueueBlock" class="isa-main-queue-block">
+        <span id="newUpdatedQueue" class="isa-queue">
+            NewQueueName<br />
+        </span>
+        <span id="newQueueCount" class="isa-queue-count">
+            0
+        </span>
+        <button id="declareNewQueue" class="isa-add-queue" style="display: none" data-toggle="modal" data-target="#declareNewQueueForm">
+            Объявить очередь
+        </button>
+    </div>
+    <div id="deletedQueueBlock" class="isa-main-queue-block">
+        <span id="deletedQueue" class="isa-queue">
+            DeletedQueueName<br />
+        </span>
+        <span id="deletedQueueCount" class="isa-queue-count">
+            0
+        </span>
+        <button id="declareDeletedQueue" class="isa-add-queue" style="display: none" data-toggle="modal" data-target="#declareDeletedQueueForm">
+            Объявить очередь
+        </button>
+    </div>
+</div>
+<div class="isa-main-actors">
+    <div id="extractorBlock" class="isa-main-extractor-none">
+        <span class="isa-extractor-title">Экстрактор</span>
+        <div class="isa-main-progress">
+            <button disabled id="buttonNew" class="isa-main-progress-func-off" onclick="disableButton(this)">
+                NEW Загрузка
+            </button>
+            <button disabled id="buttonUpd" class="isa-main-progress-func-off" onclick="disableButton(this)">
+                UPDATED Загрузка
+            </button>
+            <button disabled id="buttonDel" class="isa-main-progress-func-off" onclick="disableButton(this)">
+                DELETED Загрузка
+            </button>
+        </div>
+        <span id="lastArticleIdState">LastArticleId: 0</span>
+        <div class="isa-main-block">
+            <button disabled id="openModal" class="isa-start-ex-download" data-toggle="modal" data-target="#lastArticleForm">Загрузка...</button>
+        </div>
+    </div>
+    <div id="indexerBlock" class="isa-main-indexer-none">
+        <div class="isa-index-before">
+            <span class="isa-indexer-title">Индексатор</span>
+            <button disabled id="buttonIndex" class="isa-main-index-off" onclick="disableButton(this)">Загрузка данных</button>
+        </div>
+        <button disabled id="indexSubmit" type="button" class="isa-index-start-download" onclick="startIndex()">Загрузка...</button>
+    </div>
+    <div id="tgCollectorBlock" class="isa-main-tgcollector-none">
+        <div class="isa-tgcollector-before">
+            <span class="isa-tgcollector-title">Телеграм</span>
+            <button disabled id="buttonTgCollector" class="isa-main-tgcollector-off" onclick="disableButton(this)">Загрузка данных</button>
+        </div>
+        <button disabled id="tgCollectorSubmit" type="button" class="isa-tgcollector-start-download" onclick="startTgCollector()">Загрузка...</button>
+    </div>
+    <div id="vkCollectorBlock" class="isa-main-vkcollector-none">
+        <div class="isa-vkcollector-before">
+            <span class="isa-vkcollector-title">Вконтакте</span>
+            <button disabled id="buttonVkCollector" class="isa-main-vkcollector-off" onclick="disableButton(this)">Загрузка данных</button>
+        </div>
+        <button disabled id="vkCollectorSubmit" type="button" class="isa-vkcollector-start-download" onclick="startVkCollector()">Загрузка...</button>
+    </div>
+</div>

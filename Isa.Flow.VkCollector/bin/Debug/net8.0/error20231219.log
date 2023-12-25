@@ -1,0 +1,8 @@
+2023-12-19 11:16:31.654 +03:00 [FTL] Ошибка при запуске приложения.
+System.IO.FileNotFoundException: The configuration file 'vkcollector.conf.json' was not found and is not optional. The expected physical path was 'C:\Work\Projects\Isa.Flow\Isa.Flow.VkCollector\bin\Debug\net8.0\vkcollector.conf.json'.
+   at Microsoft.Extensions.Configuration.FileConfigurationProvider.HandleException(ExceptionDispatchInfo info)
+   at Microsoft.Extensions.Configuration.FileConfigurationProvider.Load(Boolean reload)
+   at Microsoft.Extensions.Configuration.FileConfigurationProvider.Load()
+   at Microsoft.Extensions.Configuration.ConfigurationRoot..ctor(IList`1 providers)
+   at Microsoft.Extensions.Configuration.ConfigurationBuilder.Build()
+   at Isa.Flow.VkCollector.Program.Main(String[] args) in C:\Work\Projects\Isa.Flow\Isa.Flow.VkCollector\Program.cs:line 23

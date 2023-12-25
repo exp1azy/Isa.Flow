@@ -1,0 +1,24 @@
+﻿@model Isa.Flow.Manager.Models.Telegram.ViewModels.VerificationViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Номер телефона";
+}
+<div class="ver_input_form">
+    <form id="ver_form" action="PhoneNumberForm" method="post">
+        <div class="tg_edit_form_title">
+            <p class="edit_title">Введите номер телефона</p>
+        </div>
+        <div class="ver_form_input">
+            <input id="tgInput" class="tg_input" name="phoneNumber" value="@Model.Number" placeholder="Номер" />
+            @{
+                if (Model.ErrorMessage != null)
+                {
+                    <p class="tg_error_message">@Model.ErrorMessage</p>
+                }
+            }
+        </div>
+        <div class="ver_form_submit">
+            <button id="buttonRun" type="submit" class="button_run">ПРОДОЛЖИТЬ</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,28 @@
+﻿<div class="modal" tabindex="-1" id="lastArticleForm">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Введите параметры</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="extractionForm" action="/Home/StartExtraction" method="post">
+                <div id="modalBody" class="modal-body">
+                    <label id="newLabel" for="articleId">Идентификатор статьи</label>
+                    <input name="ArticleId" id="articleId" value="0" />
+                    <label for="func">Функция</label>
+                    <select id="func" name="Func">
+                        <option value="0" id="newOption">New</option>
+                        <option value="1" id="updOption">Updated</option>
+                        <option value="2" id="delOption">Deleted</option>
+                        <option value="3" id="reOption">Reindex</option>
+                        <option value="4" id="clOption">Clean</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button id="startExtractionButton" type="button" class="btn btn-primary" onclick="startExtraction()">Запустить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

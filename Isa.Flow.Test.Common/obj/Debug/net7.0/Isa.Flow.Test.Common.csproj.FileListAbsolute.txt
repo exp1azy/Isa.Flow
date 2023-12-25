@@ -1,0 +1,15 @@
+C:\Work\Projects\Isa.Flow\Isa.Flow.Test.Common\bin\Debug\net7.0\Isa.Flow.Test.Common.deps.json
+C:\Work\Projects\Isa.Flow\Isa.Flow.Test.Common\bin\Debug\net7.0\Isa.Flow.Test.Common.dll
+C:\Work\Projects\Isa.Flow\Isa.Flow.Test.Common\bin\Debug\net7.0\Isa.Flow.Test.Common.pdb
+C:\Work\Projects\Isa.Flow\Isa.Flow.Test.Common\bin\Debug\net7.0\Isa.Flow.Interact.dll
+C:\Work\Projects\Isa.Flow\Isa.Flow.Test.Common\bin\Debug\net7.0\Isa.Flow.Interact.pdb
+C:\Work\Projects\Isa.Flow\Isa.Flow.Test.Common\obj\Debug\net7.0\Isa.Flow.Test.Common.csproj.AssemblyReference.cache
+C:\Work\Projects\Isa.Flow\Isa.Flow.Test.Common\obj\Debug\net7.0\Isa.Flow.Test.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\Projects\Isa.Flow\Isa.Flow.Test.Common\obj\Debug\net7.0\Isa.Flow.Test.Common.AssemblyInfoInputs.cache
+C:\Work\Projects\Isa.Flow\Isa.Flow.Test.Common\obj\Debug\net7.0\Isa.Flow.Test.Common.AssemblyInfo.cs
+C:\Work\Projects\Isa.Flow\Isa.Flow.Test.Common\obj\Debug\net7.0\Isa.Flow.Test.Common.csproj.CoreCompileInputs.cache
+C:\Work\Projects\Isa.Flow\Isa.Flow.Test.Common\obj\Debug\net7.0\Isa.Flow.Test.Common.csproj.CopyComplete
+C:\Work\Projects\Isa.Flow\Isa.Flow.Test.Common\obj\Debug\net7.0\Isa.Flow.Test.Common.dll
+C:\Work\Projects\Isa.Flow\Isa.Flow.Test.Common\obj\Debug\net7.0\refint\Isa.Flow.Test.Common.dll
+C:\Work\Projects\Isa.Flow\Isa.Flow.Test.Common\obj\Debug\net7.0\Isa.Flow.Test.Common.pdb
+C:\Work\Projects\Isa.Flow\Isa.Flow.Test.Common\obj\Debug\net7.0\ref\Isa.Flow.Test.Common.dll
